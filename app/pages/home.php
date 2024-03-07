@@ -4,12 +4,12 @@
 include "../connection.php";
 
 // Execute uma consulta
-$query = "SELECT * FROM Usuarios";
+$query = "SELECT * FROM user";
 $result = mysqli_query($con, $query);
 
 // Verifique se a consulta foi bem sucedida
 if (!$result) {
-    die("Erro ao executar a consulta: " . mysqli_error($con));
+  die("Erro ao executar a consulta: " . mysqli_error($con));
 }
 
 // Feche a conexão
