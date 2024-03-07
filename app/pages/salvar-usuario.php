@@ -10,6 +10,16 @@ switch ($_REQUEST["acao"]) {
     $sql = "INSERT INTO user (nome, nivel_de_permissao, cpf, email, senha) VALUES('{$nome}','{$nivel_de_permissao}','{$cpf}','{$email}','{$senha}')";
 
     $res = $con->query($sql);
+    $res = $con->query($sql);
+
+    if($res==true){
+      print "<script>alert('Cadastro feito com sucesso');</script>";
+      print "<script>location.href='?page=listar-usuario.php';</script>";
+    }else{
+      print "<script>alert('Não foi possivel cadastrar');</script>";
+      print "<script>location.href='?page=listar-usuario.php';</script>";
+
+    }
     break;
 
   case 'editar':
